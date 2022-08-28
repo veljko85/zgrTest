@@ -365,41 +365,36 @@ function setDisplayCounter(scrollSectionDisplay, counterLine, counterLineNum) {
 }
 
 function scrollVideo(nextScrollSec, from, to, sectCurTime) {
-  videos[0].currentTime = sectCurTime;
-  setTimeout(() => {
-    videos[0].style.opacity = 1;
-    videosRev[0].style.opacity = 0;
-    videos[0].play();
-    triger = true;
-    scrollSection = nextScrollSec;
-    let intervalPlaySrollA = setInterval(() => {
-      if (videos[0].currentTime > from && videos[0].currentTime < to) {
-        clearInterval(intervalPlaySrollA);
-        videos[0].pause();
-        setTimeout(() => {
-          triger = false;
-        }, 100);
-      }
-    }, 100);
+  videosRev[0].currentTime = sectCurTime;
+  videosRev[0].style.opacity = 0;
+  videos[0].play();
+  triger = true;
+  scrollSection = nextScrollSec;
+  let intervalPlaySrollA = setInterval(() => {
+    if (videos[0].currentTime > from && videos[0].currentTime < to) {
+      clearInterval(intervalPlaySrollA);
+      videos[0].pause();
+      setTimeout(() => {
+        triger = false;
+      }, 100);
+    }
   }, 100);
 }
 function scrollVideoRev(nextScrollSec, from, to, sectCurTime) {
-  videosRev[0].currentTime = sectCurTime;
-  setTimeout(() => {
-    videosRev[0].style.opacity = 1;
-    videos[0].style.opacity = 0;
-    videosRev[0].play();
-    triger = true;
-    scrollSection = nextScrollSec;
-    let intervalPlaySrollR = setInterval(() => {
-      if (videosRev[0].currentTime > from && videosRev[0].currentTime < to) {
-        clearInterval(intervalPlaySrollR);
-        videosRev[0].pause();
-        setTimeout(() => {
-          triger = false;
-        }, 100);
-      }
-    }, 100);
+  videos[0].currentTime = sectCurTime;
+  videosRev[0].style.opacity = 1;
+  videosRev[0].play();
+  triger = true;
+  scrollSection = nextScrollSec;
+  let intervalPlaySrollR = setInterval(() => {
+    if (videosRev[0].currentTime > from && videosRev[0].currentTime < to) {
+      clearInterval(intervalPlaySrollR);
+      videosRev[0].pause();
+      // videos[0].style.opacity = 0;
+      setTimeout(() => {
+        triger = false;
+      }, 100);
+    }
   }, 100);
 }
 //FUNCTION VIDEO FORVARD
@@ -422,7 +417,7 @@ function videoForvard() {
     }, 1100);
     //start video
     setDisplayCounter(2, counterLine, 1);
-    scrollVideo(3, 12.5, 13.5, 5);
+    scrollVideo(3, 12.5, 13.5, 71.7);
     //content display
     setTimeout(() => {
       sectionContainer[1].style.display = "block";
@@ -452,7 +447,7 @@ function videoForvard() {
     }, 1100);
     //start video
     setDisplayCounter(3, counterLine, 2);
-    scrollVideo(4, 18.5, 19.5, 12.5);
+    scrollVideo(4, 18.5, 19.5, 65.6);
     //content display
     setTimeout(() => {
       sectionContainer[2].style.display = "block";
@@ -482,7 +477,7 @@ function videoForvard() {
     }, 1100);
     //start video
     setDisplayCounter(4, counterLine, 3);
-    scrollVideo(5, 27.5, 28.5, 18.5);
+    scrollVideo(5, 28.1, 28.5, 56.4);
     //content display
     setTimeout(() => {
       sectionContainer[3].style.display = "block";
@@ -516,7 +511,7 @@ function videoForvard() {
     }, 1100);
     //start video
     setDisplayCounter(5, counterLine, 4);
-    scrollVideo(6, 35.5, 36.5, 27.5);
+    scrollVideo(6, 36.2, 36.5, 48.5);
     //content display
     setTimeout(() => {
       sectionContainer[4].style.display = "block";
@@ -550,7 +545,7 @@ function videoForvard() {
     }, 1100);
     //start video
     setDisplayCounter(6, counterLine, 5);
-    scrollVideo(7, 41.5, 42.5, 35.5);
+    scrollVideo(7, 41.5, 42.5, 42.5);
     //content display
     setTimeout(() => {
       sectionContainer[5].style.display = "block";
@@ -584,7 +579,7 @@ function videoForvard() {
     }, 1100);
     //start video
     setDisplayCounter(7, counterLine, 6);
-    scrollVideo(8, 53.5, 54.5, 41.5);
+    scrollVideo(8, 53.5, 54.5, 30.3);
     //content display
     setTimeout(() => {
       sectionContainer[6].style.display = "block";
@@ -618,7 +613,7 @@ function videoForvard() {
     }, 1100);
     //start video
     setDisplayCounter(8, counterLine, 7);
-    scrollVideo(9, 61.5, 62.5, 53.5);
+    scrollVideo(9, 61.5, 62.5, 23.2);
     //content display
     setTimeout(() => {
       sectionContainer[7].style.display = "block";
@@ -656,7 +651,7 @@ function videoForvard() {
     }, 1100);
     //start video
     setDisplayCounter(9, counterLine, 8);
-    scrollVideo(10, 70, 71, 61.5);
+    scrollVideo(10, 69.9, 71, 14.1);
     //content display
     setTimeout(() => {
       sectionContainer[8].style.display = "block";
@@ -695,7 +690,7 @@ function videoForvard() {
     }, 1100);
     //start video
     setDisplayCounter(10, counterLine, 9);
-    scrollVideo(11, 76.5, 77.5, 70);
+    scrollVideo(11, 76.6, 77.5, 7.2);
     //content display
     setTimeout(() => {
       sectionContainer[9].style.display = "block";
@@ -727,7 +722,7 @@ function videoForvard() {
     }, 1100);
     //start video
     setDisplayCounter(11, counterLine, 10);
-    scrollVideo(12, 83.5, 84, 76.5);
+    scrollVideo(12, 83.5, 84, 0.5);
     //content display
     setTimeout(() => {
       sectionContainer[10].style.display = "block";
@@ -756,7 +751,7 @@ function videoReverse() {
     }, 1100);
     // start video
     setDisplayCounter(1, counterLine, 0);
-    scrollVideoRev(2, 79, 80, 71.7);
+    scrollVideoRev(2, 79.7, 80.2, 5);
     //content display
     setTimeout(() => {
       sectionContainer[0].style.display = "block";
@@ -800,7 +795,7 @@ function videoReverse() {
     }, 1100);
     //start video
     setDisplayCounter(2, counterLine, 1);
-    scrollVideoRev(3, 71.7, 72.7, 65.6);
+    scrollVideoRev(3, 71.7, 72.7, 12.5);
     //content display
     setTimeout(() => {
       sectionContainer[1].style.display = "block";
@@ -831,7 +826,7 @@ function videoReverse() {
     }, 1100);
     //start video
     setDisplayCounter(3, counterLine, 2);
-    scrollVideoRev(4, 65.6, 66.6, 56.3);
+    scrollVideoRev(4, 65.6, 66.6, 18.5);
     //content display
     setTimeout(() => {
       sectionContainer[2].style.display = "block";
@@ -862,7 +857,7 @@ function videoReverse() {
     }, 1100);
     //start video
     setDisplayCounter(4, counterLine, 3);
-    scrollVideoRev(5, 56.3, 57.3, 48.5);
+    scrollVideoRev(5, 56.4, 57.3, 28.1);
     //content display
     setTimeout(() => {
       sectionContainer[3].style.display = "block";
@@ -896,7 +891,7 @@ function videoReverse() {
     }, 1100);
     // start video
     setDisplayCounter(5, counterLine, 4);
-    scrollVideoRev(6, 48.5, 49.5, 42.3);
+    scrollVideoRev(6, 48.5, 49.5, 36.2);
     //content display
     setTimeout(() => {
       sectionContainer[4].style.display = "block";
@@ -930,7 +925,7 @@ function videoReverse() {
     }, 1100);
     //start video
     setDisplayCounter(6, counterLine, 5);
-    scrollVideoRev(7, 42.3, 43.3, 30.3);
+    scrollVideoRev(7, 42.5, 43.3, 41.5);
     //content display
     setTimeout(() => {
       sectionContainer[5].style.display = "block";
@@ -965,7 +960,7 @@ function videoReverse() {
     }, 1100);
     //start video
     setDisplayCounter(7, counterLine, 6);
-    scrollVideoRev(8, 30.3, 31.3, 23);
+    scrollVideoRev(8, 30.3, 31.3, 53.5);
     //content display
     setTimeout(() => {
       sectionContainer[6].style.display = "block";
@@ -1001,7 +996,7 @@ function videoReverse() {
     }, 1100);
     //start video
     setDisplayCounter(8, counterLine, 7);
-    scrollVideoRev(9, 23, 24, 13.8);
+    scrollVideoRev(9, 23.2, 24, 61.5);
     //content display
     setTimeout(() => {
       sectionContainer[7].style.display = "block";
@@ -1038,7 +1033,7 @@ function videoReverse() {
     }, 1100);
     //start video
     setDisplayCounter(9, counterLine, 8);
-    scrollVideoRev(10, 13.8, 14.8, 6.8);
+    scrollVideoRev(10, 14.1, 14.8, 69.9);
     //content display
     setTimeout(() => {
       sectionContainer[8].style.display = "block";
@@ -1071,7 +1066,7 @@ function videoReverse() {
     }, 500);
     //start video
     setDisplayCounter(10, counterLine, 9);
-    scrollVideoRev(11, 6.8, 7.8, 0.5);
+    scrollVideoRev(11, 7.2, 7.8, 76.6);
     //content display
     setTimeout(() => {
       sectionContainer[9].style.display = "block";
