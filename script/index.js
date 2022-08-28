@@ -1113,6 +1113,7 @@ let intervalPlay2 = setInterval(() => {
     if (videos[0].currentTime > 5 && videos[0].currentTime < 6) {
       clearInterval(intervalPlay2);
       videos[0].pause();
+      videosRev[0].pause();
       setTimeout(() => {
         triger = false;
       }, 1100);
