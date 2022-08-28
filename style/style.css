@@ -739,7 +739,7 @@ input:focus::placeholder {
   height: 40px;
   height: 2.08vw;
 }
-
+/* ///////////////////////////////////////////////////// MOBILE */
 @media (max-width: 500px) and (orientation: portrait) {
   .nav-bar {
     height: 40px;
@@ -1015,6 +1015,7 @@ input:focus::placeholder {
     height: 10.67vw;
   }
 }
+/* ///////////////////////////////////////////////////// TABLET */
 @media (min-width: 501px) and (orientation: portrait) {
   .nav-bar {
     height: 60px;
