@@ -1505,3 +1505,7 @@ document.getElementById("arrowUpSect").onclick = () => {
 document.getElementById("arrowDownSect").onclick = () => {
   videoForvard();
 };
+setInterval(() => {
+  console.log(videos[0].readyState);
+  console.log(videosRev[0].readyState);
+}, 100);
